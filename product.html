@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>products</title>
+	<link rel="stylesheet"  href="C:\Users\jabba\OneDrive\Desktop\Demo 1\styles\csproduct.css">
+</head>
+<body>
+<nav>
+		<img src="C:\Users\jabba\OneDrive\Desktop\Demo 1\images\mainlogo.jpg">
+		<label class="logo">Tabbib <sub>We Care</sub></label>
+
+		<ul>
+			
+				<li><a class="acive" href="#">Home</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="login-page.html">LogOut</a></li>
+			
+		</ul>
+	</nav>
+
+       <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input id="InputSearch" type="text" placeholder="Type to search..">
+        <div class="autocom-box">
+          
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+
+    <div id="unfold" class="notfold">
+	<div id="product-name">
+
+		
+	</div>
+	<form class="product-design">
+	<select name="quantity" class="qty">
+		<option>box</option>
+		<option>piece</option>
+	</select>
+
+	<button id="pbtn" class="pbtn">+</button>
+ <button id="qbtn" class="qbtn">qty</button>
+	 <button id="mbtn" class="mbtn">-</button>
+
+<div>
+	<button class="add-to-cart"><a href="inventory.html"> add to cart </a></button>
+</form >
+</div>
+</div>
+<script type="text/javascript">
+
+		let btn = document.getElementById('qbtn')
+		let pbtn =document.getElementById('pbtn')
+		let mbtn =document.getElementById('mbtn')
+
+		btn.addEventListener('click',()=>{
+			btn.innerText=1;
+			pbtn.style.display='inline-block';
+			mbtn.style.display='inline-block';
+		}); 
+		mbtn.addEventListener('click',()=>{
+			btn.innerText=btn.innerText -1;
+			pbtn.style.display='inline-block';
+			mbtn.style.display='inline-block';
+		});
+		pbtn.addEventListener('click',()=>{
+			btn.innerText=parseInt(btn.innerText) +1;
+			pbtn.style.display='inline-block';
+			mbtn.style.display='inline-block';
+		});
+	</script>
+	<script src="C:\Users\jabba\OneDrive\Desktop\Demo 1\script\suggestions.js"></script> 
+     <script src="C:\Users\jabba\OneDrive\Desktop\Demo 1\script\res-bar.js"></script> 
+</body>
+</html>
